@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="io.virtualhook">
     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
     <application
         android:name="io.virtualapp.VApp"
         android:allowBackup="true"
@@ -40,13 +42,13 @@
             android:taskAffinity="va.task.loading"
             android:theme="@style/TransparentTheme"/>
         <activity
-            android:name=".home.location.VirtualLocationSettings"
+            android:name="io.virtualapp.home.location.VirtualLocationSettings"
             android:screenOrientation="portrait"
             android:theme="@style/UITheme"
             />
 
         <activity
-            android:name=".home.location.MarkerActivity"
+            android:name="io.virtualapp.home.location.MarkerActivity"
             android:screenOrientation="portrait"
             android:theme="@style/UITheme"
             />

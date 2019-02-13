@@ -1,11 +1,16 @@
+tasks.whenTaskAdded { task ->
+    if (task.name.contains("lint") || task.name.contains("lintVitalRelease")) {
+        task.enabled = false
+    }
+}
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 25
+    compileSdkVersion 28
     buildToolsVersion '28.0.2'
     defaultConfig {
         applicationId "lab.galaxy.demeHookPlugin"
-        minSdkVersion 21
+        minSdkVersion 24
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"
